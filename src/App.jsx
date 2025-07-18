@@ -61,8 +61,10 @@ function App() {
           <div
             id='menu'
             className={`absolute top-0 bottom-0 left-0 ${
-              isMobileMenuOpen ? 'flex' : 'hidden'
-            } flex-col self-end  w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-black`}
+              isMobileMenuOpen
+                ? 'opacity-100 translate-x-0'
+                : 'opacity-0 -translate-x-full'
+            } flex flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-black transition-all duration-300 ease-in-out`}
           >
             <a href='#' className='hover:text-pink-500'>
               About
